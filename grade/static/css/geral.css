@@ -1,0 +1,132 @@
+body {
+  color: #fff;
+  border: none;
+  background: #4f4f4f;
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+}
+button {
+  display: block;
+  box-sizing: border-box;
+  padding: 0.7rem 0.5rem;
+  border-radius: 20px;
+  font-size: 24px;
+  border: 1px solid #1d1d1d;
+  color: white;
+  cursor: pointer;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  animation: commingDown 0.3s forwards;
+}
+.main-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  font-size: 24px;
+  margin: 16px 0;
+  margin-top: 80px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.main-buttons button {
+  width: 100%;
+  border-radius: 0px;
+  padding: 2rem;
+  font-weight: bold;
+}
+.main-buttons button:nth-child(1) {
+  margin-right: auto;
+}
+.button-gray {
+  background: #6c757d;
+  border: 1px solid #6c757d;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.button-gray:hover {
+  background: #7d868e;
+  border-color: #7d868e;
+}
+.button-blue {
+  background: #00a4f1;
+  border: 1px solid #00a4f1;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+.button-blue:hover {
+  background: #12b5f2;
+  border-color: #12b5f2;
+}
+.button-blue.show {
+  width: 100%;
+  border-radius: 0px;
+  padding: 2rem;
+  font-weight: bold;
+  margin-top: 16px;
+  margin-bottom: 80px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #4f4f4f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00a4f1;
+  transition: 0.3s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #12b5f2;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-600px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translate3d(600px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes commingDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes commingUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

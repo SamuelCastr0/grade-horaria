@@ -1,0 +1,40 @@
+.table-overflow {
+  width: 100%;
+  display: block;
+  overflow: auto;
+  max-height: 590px;
+}
+.disc-table {
+  width: 100%;
+  margin: 0 !important;
+}
+.disc-table td {
+  width: 25%;
+  padding: 2rem;
+}
+.disc-table-head {
+  font-weight: bold;
+  padding: 1rem;
+  background: #222222;
+}
+.disc-table-head tr {
+  padding: 1rem;
+}
+.disc-table-row {
+  padding: 1rem;
+}
+.disc-table-row:nth-child(odd) {
+  background: #1d1d1d;
+}
+.disc-table-row:nth-child(even) {
+  background: #222222;
+}
+.disc-table-actions {
+  display: flex;
+}
+
+.disc-table-actions img {
+  max-width: 24px;
+  cursor: pointer;
+  margin-right: 24px;
+}

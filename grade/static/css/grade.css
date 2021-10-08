@@ -1,0 +1,62 @@
+.grade-container {
+  margin-bottom: 80px;
+  display: none;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 16px;
+  display: none;
+}
+.grade-container.active {
+  display: grid;
+}
+.grade-container li {
+  text-align: center;
+  padding: 2rem;
+}
+.grade-container li:first-child {
+  font-weight: bold;
+}
+.grade-container li:nth-child(even) {
+  background: #1d1d1d;
+}
+.grade-container li:nth-child(odd) {
+  background: #222222;
+}
+
+.tab-nav {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 1px;
+}
+.tab-nav button {
+  margin-bottom: 16px !important;
+  background: #1d1d1d;
+  border-color: #1d1d1d;
+}
+.tab-nav button.show:hover {
+  background: #00a4f1;
+  border-color: #00a4f1;
+}
+.tab-nav button.active {
+  margin-bottom: 16px !important;
+  background: #00a4f1;
+  border-color: #00a4f1;
+  cursor: default;
+}
+.tab-label {
+  display: block;
+  background: #1d1d1d;
+  width: 100%;
+  border-radius: 0px;
+  padding: 2rem;
+  font-weight: bold;
+  margin-top: 16px;
+  cursor: auto;
+  height: 95px;
+}
+[data-grade='content'] {
+  display: none;
+  animation: commingUp 0.3s forwards;
+}
+[data-grade='content'].active {
+  display: block;
+}

@@ -1,0 +1,542 @@
+{% extends './base.html' %} {% load static %} {% block title %}Grade
+Horária{%endblock %} {% block content %}
+<section class="container">
+  <div class="main-buttons">
+    <button class="button-blue" data-open="add">Cadastrar Disciplina</button>
+    <button class="button-blue">Gerar Grade Horária</button>
+  </div>
+  <div class="table-overflow">
+    <table class="disc-table">
+      <thead class="disc-table-head">
+        <td>Nome</td>
+        <td>Período</td>
+        <td>Carga Horária</td>
+        <td>Ações</td>
+      </thead>
+      <tbody data-fetch="list"></tbody>
+    </table>
+  </div>
+  <button class="button-blue show" id="show-grade">Mostrar Grade</button>
+  <section data-grade="content">
+    <nav class="tab-nav">
+      <button class="tab-label">Período</button>
+      <button class="button-blue show active" data-nav="tab">1º</button>
+      <button class="button-blue show" data-nav="tab">2º</button>
+      <button class="button-blue show" data-nav="tab">3º</button>
+      <button class="button-blue show" data-nav="tab">4º</button>
+      <button class="button-blue show" data-nav="tab">5º</button>
+      <button class="button-blue show" data-nav="tab">6º</button>
+      <button class="button-blue show" data-nav="tab">7º</button>
+      <button class="button-blue show" data-nav="tab">8º</button>
+      <button class="button-blue show" data-nav="tab">9º</button>
+    </nav>
+    <div class="grade-container active" data-nav="grade">
+      <ul>
+        <li>HORÁRIO</li>
+        <li>18-19</li>
+        <li>19-20</li>
+        <li>20-21</li>
+        <li>21-22</li>
+      </ul>
+      <ul>
+        <li>SEGUNDA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>TERÇA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUARTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUINTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>SEXTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+    </div>
+    <div class="grade-container" data-nav="grade">
+      <ul>
+        <li>HORÁRIO</li>
+        <li>18-19</li>
+        <li>19-20</li>
+        <li>20-21</li>
+        <li>21-22</li>
+      </ul>
+      <ul>
+        <li>SEGUNDA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>TERÇA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUARTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUINTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>SEXTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+    </div>
+    <div class="grade-container" data-nav="grade">
+      <ul>
+        <li>HORÁRIO</li>
+        <li>18-19</li>
+        <li>19-20</li>
+        <li>20-21</li>
+        <li>21-22</li>
+      </ul>
+      <ul>
+        <li>SEGUNDA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>TERÇA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUARTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUINTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>SEXTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+    </div>
+    <div class="grade-container" data-nav="grade">
+      <ul>
+        <li>HORÁRIO</li>
+        <li>18-19</li>
+        <li>19-20</li>
+        <li>20-21</li>
+        <li>21-22</li>
+      </ul>
+      <ul>
+        <li>SEGUNDA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>TERÇA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUARTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUINTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>SEXTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+    </div>
+    <div class="grade-container" data-nav="grade">
+      <ul>
+        <li>HORÁRIO</li>
+        <li>18-19</li>
+        <li>19-20</li>
+        <li>20-21</li>
+        <li>21-22</li>
+      </ul>
+      <ul>
+        <li>SEGUNDA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>TERÇA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUARTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUINTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>SEXTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+    </div>
+    <div class="grade-container" data-nav="grade">
+      <ul>
+        <li>HORÁRIO</li>
+        <li>18-19</li>
+        <li>19-20</li>
+        <li>20-21</li>
+        <li>21-22</li>
+      </ul>
+      <ul>
+        <li>SEGUNDA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>TERÇA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUARTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUINTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>SEXTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+    </div>
+    <div class="grade-container" data-nav="grade">
+      <ul>
+        <li>HORÁRIO</li>
+        <li>18-19</li>
+        <li>19-20</li>
+        <li>20-21</li>
+        <li>21-22</li>
+      </ul>
+      <ul>
+        <li>SEGUNDA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>TERÇA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUARTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUINTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>SEXTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+    </div>
+    <div class="grade-container" data-nav="grade">
+      <ul>
+        <li>HORÁRIO</li>
+        <li>18-19</li>
+        <li>19-20</li>
+        <li>20-21</li>
+        <li>21-22</li>
+      </ul>
+      <ul>
+        <li>SEGUNDA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>TERÇA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUARTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUINTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>SEXTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+    </div>
+    <div class="grade-container" data-nav="grade">
+      <ul>
+        <li>HORÁRIO</li>
+        <li>18-19</li>
+        <li>19-20</li>
+        <li>20-21</li>
+        <li>21-22</li>
+      </ul>
+      <ul>
+        <li>SEGUNDA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>TERÇA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUARTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>QUINTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+      <ul>
+        <li>SEXTA-FEIRA</li>
+        <li>AEDS II</li>
+        <li>PO</li>
+        <li>GAAL</li>
+        <li>AEDS II</li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+<script src="../../static/js/script.js" type="module"></script>
+<!-- ##################################### MODAL ADD ######################################## -->
+<section class="modal-container" data-modal="add">
+  <div class="modal-box">
+    <!-- <div class="modal-header"> -->
+    <!-- <h1 class="title">Adicionar Diciplina</h1> -->
+    <button class="close button-gray" data-modal="close">X</button>
+    <!-- </div> -->
+    <form action="" data-form="add">
+      <label for="nome">Nome</label>
+      <input
+        id="nome"
+        name="nome"
+        type="text"
+        required
+        placeholder="Ex: Lógica Computacional"
+      />
+      <label for="periodo">Período</label>
+      <input
+        id="periodo"
+        name="periodo"
+        type="number"
+        min="0"
+        max="9"
+        placeholder="Ex: 1"
+        required
+      />
+      <label for="carga">Carga Horária</label>
+      <input
+        id="carga"
+        name="carga"
+        type="number"
+        min="2"
+        max="4"
+        required
+        placeholder="Ex: 4"
+      />
+      <div class="modal-actions">
+        <button class="button-gray" data-modal="close">Cancelar</button>
+        <button class="button-blue" data-modal="submit" type="submit">
+          Adicionar
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ##################################### MODAL VIEW ######################################## -->
+<section class="modal-container" data-modal="view">
+  <div class="modal-box">
+    <button class="close button-gray" data-modal="close">X</button>
+    <form action="" data-key="">
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" type="text" disabled />
+      <label for="periodo">Período</label>
+      <input id="periodo" name="periodo" type="number" disabled />
+      <label for="carga">Carga Horária</label>
+      <input id="carga" name="carga" type="number" disabled />
+    </form>
+  </div>
+</section>
+
+<!-- ##################################### MODAL EDIT ######################################## -->
+<section class="modal-container" data-modal="edit">
+  <div class="modal-box">
+    <!-- <div class="modal-header"> -->
+    <!-- <h1 class="title">Adicionar Diciplina</h1> -->
+    <button class="close button-gray" data-modal="close">X</button>
+    <!-- </div> -->
+    <form action="" data-key="" data-form="edit">
+      <label for="nome">Nome</label>
+      <input id="nome" name="nome" type="text" required />
+      <label for="periodo">Período</label>
+      <input
+        id="periodo"
+        name="periodo"
+        type="number"
+        min="0"
+        max="9"
+        required
+      />
+      <label for="carga">Carga Horária</label>
+      <input id="carga" name="carga" type="number" min="2" max="4" required />
+      <div class="modal-actions">
+        <button class="button-gray" data-modal="close">Cancelar</button>
+        <button class="button-blue" data-modal="submit" type="submit">
+          Modificar
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- ##################################### MODAL DELETE ######################################## -->
+<section class="modal-container" data-modal="delete">
+  <div class="modal-box">
+    <!-- <div class="modal-header"> -->
+    <!-- <h1 class="title">Adicionar Diciplina</h1> -->
+    <button class="close button-gray" data-modal="close">X</button>
+    <!-- </div> -->
+    <form action="" data-form="delete">
+      <p>Deseja deletar essa disciplina?</p>
+      <div class="modal-actions">
+        <button class="button-gray" data-modal="close">Cancelar</button>
+        <button class="button-blue" data-modal="submit" type="submit">
+          Deletar
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}
